@@ -1,0 +1,59 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack boxes vertically */
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+main {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+.box {
+    text-transform: capitalize;
+    background-color: #73AD21; /* Background color */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px 0; /* Reduced margin */
+    padding: 20px; /* Padding for internal space */
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 70%; /* Reduced responsive width */
+    height: 60px; /* Reduced height by an additional 30 pixels */
+}
+
+.box.expanded {
+    height: auto; /* Allow height to expand when clicked */
+}
+
+.box:hover {
+    background-color: #5a9e1f; /* Darker shade on hover */
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 600px) {
+    .box {
+        font-size: 14px; /* Smaller text on small screens */
+        padding: 15px; /* Adjusted padding */
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Allow height to adjust on smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .box {
+        font-size: 16px; 
+    }
+}
